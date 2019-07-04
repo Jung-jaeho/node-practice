@@ -14,6 +14,9 @@ var app = http.createServer(function(request,response){
       return response.writeHead(404);
     }
     response.writeHead(200);
+    //쿼리 스트링에 따라서 파일명이 생성된다.
+    //fs.readFile('data/${queryData.id}','utf8',function(err,data))
+    //}
     //제목1과 제목2를 바꾸고 싶다
     var template = `
     <!doctype html>
@@ -22,7 +25,7 @@ var app = http.createServer(function(request,response){
   <title>WEB1 - ${title}</title>
   <meta charset="utf-8">
 </head>
-<body>
+<body> 
   <h1><a href="/">WEB</a></h1>
   <ol>
     <li><a href="/?id=HTML">HTML</a></li>
